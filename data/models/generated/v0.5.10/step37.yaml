@@ -1,0 +1,87 @@
+vendor: stepfun-ai
+families:
+- name: Step-3.7-Flash
+  description: StepFun Step-3.7-Flash 198B-parameter sparse MoE vision-language model (~11B activated, 256K context, three
+    reasoning levels)
+  models:
+  - name: Step-3.7-Flash-FP8
+    model_path: stepfun-ai/Step-3.7-Flash-FP8
+    attributes:
+      llm:
+        thinking_capability: thinking
+        tool_parser: step3p5
+        reasoning_parser: step3p5
+        chat_template: null
+    hardware:
+      MI300X:
+        configurations:
+        - name: default
+          attributes:
+            nodes: single
+            optimization: balanced
+            quantization: fp8
+          quantized_model_path: null
+          engine:
+            env_vars: {}
+            tp: 8
+            dp: null
+            ep: 8
+            enable_dp_attention: null
+            extra_args:
+            - --trust-remote-code
+          prefill: null
+          decode: null
+      MI325X:
+        configurations:
+        - name: default
+          attributes:
+            nodes: single
+            optimization: balanced
+            quantization: fp8
+          quantized_model_path: null
+          engine:
+            env_vars: {}
+            tp: 8
+            dp: null
+            ep: 8
+            enable_dp_attention: null
+            extra_args:
+            - --trust-remote-code
+          prefill: null
+          decode: null
+      MI350X:
+        configurations:
+        - name: default
+          attributes:
+            nodes: single
+            optimization: balanced
+            quantization: fp8
+          quantized_model_path: null
+          engine:
+            env_vars: {}
+            tp: 8
+            dp: null
+            ep: 8
+            enable_dp_attention: null
+            extra_args:
+            - --trust-remote-code
+          prefill: null
+          decode: null
+      MI355X:
+        configurations:
+        - name: default
+          attributes:
+            nodes: single
+            optimization: balanced
+            quantization: fp8
+          quantized_model_path: null
+          engine:
+            env_vars: {}
+            tp: 8
+            dp: null
+            ep: 8
+            enable_dp_attention: null
+            extra_args:
+            - --trust-remote-code
+          prefill: null
+          decode: null

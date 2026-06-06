@@ -1,0 +1,40 @@
+# Step-3.7-Flash Model Configurations (Simplified Format)
+# This file is compiled to data/models/generated/v0.5.10/step37.yaml
+#
+# Step-3.7-Flash-FP8: 198B-parameter sparse MoE vision-language model from StepFun
+#   ~11B activated parameters per token, 256K context window
+#
+# GPU requirements (FP8, ~198 GB weights):
+#   MI300X (192GB): tp=8 ep=8
+#   MI325X (256GB): tp=8 ep=8
+#   MI350X (288GB): tp=8 ep=8
+#   MI355X (288GB): tp=8 ep=8
+
+vendor: stepfun-ai
+
+defaults:
+  hardware:
+    MI300X: { tp: 8, ep: 8 }
+    MI325X: { tp: 8, ep: 8 }
+    MI350X: { tp: 8, ep: 8 }
+    MI355X: { tp: 8, ep: 8 }
+  configurations:
+    - name: default
+      nodes: single
+      optimization: balanced
+      extra_args:
+        - --trust-remote-code
+
+families:
+  - name: Step-3.7-Flash
+    description: StepFun Step-3.7-Flash 198B-parameter sparse MoE vision-language model (~11B activated, 256K context, three reasoning levels)
+    llm:
+      tool_parser: step3p5
+      reasoning_parser: step3p5
+
+    models:
+      - name: Step-3.7-Flash-FP8
+        llm:
+          thinking_capability: thinking
+          quantizations:
+            - fp8

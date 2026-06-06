@@ -28,7 +28,7 @@ Each recipe provides step-by-step instructions to help you quickly implement SGL
 
 #### Google
 
-- [x] [Gemma 4](./autoregressive/Google/Gemma4.md) <span style={{backgroundColor: '#10b981', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: 'bold', marginLeft: '8px'}}>NEW</span>
+- [x] [Gemma 4](./autoregressive/Google/Gemma4.md)
 
 #### Qwen
 
@@ -126,6 +126,7 @@ Each recipe provides step-by-step instructions to help you quickly implement SGL
 
 #### StepFun
 
+- [x] [Step3.7-Flash](./autoregressive/StepFun/Step3.7-Flash.md) <span style={{backgroundColor: '#10b981', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '12px', fontWeight: 'bold', marginLeft: '8px'}}>NEW</span>
 - [x] [Step3.5](./autoregressive/StepFun/Step3.5.md)
 - [x] [Step3-VL-10B](./autoregressive/StepFun/Step3-VL-10B.md)
 

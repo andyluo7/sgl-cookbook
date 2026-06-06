@@ -29,7 +29,7 @@ const sidebars = {
             {
               type: 'doc',
               id: 'autoregressive/Google/Gemma4',
-              label: 'Gemma 4 [NEW]',
+              label: 'Gemma 4',
             },
           ],
         },
@@ -219,6 +219,11 @@ const sidebars = {
           type: 'category',
           label: 'StepFun',
           items: [
+            {
+              type: 'doc',
+              id: 'autoregressive/StepFun/Step3.7-Flash',
+              label: 'Step3.7-Flash [NEW]',
+            },
             {
               type: 'doc',
               id: 'autoregressive/StepFun/Step3.5',
